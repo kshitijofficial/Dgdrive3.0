@@ -21,10 +21,11 @@ const FileUpload = ({ contract, account, provider }) => {
             "Content-Type": "multipart/form-data",
           },
         });
-        const ImgHash = `ipfs://${resFile.data.IpfsHash}`;
-        //const signer = contract.connect(provider.getSigner());
-        const signer = contract.connect(provider.getSigner());
-        signer.add(account, ImgHash);
+        const ImgHash = `https://gateway.pinata.cloud/ipfs/${resFile.data.IpfsHash}`;
+        contract.add(account,ImgHash);
+        alert("Successfully Image Uploaded");
+        setFileName("No image selected");
+        setFile(null);
       } catch (e) {
         alert("Unable to upload image to Pinata");
       }
