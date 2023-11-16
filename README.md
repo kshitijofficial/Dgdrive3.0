@@ -30,6 +30,7 @@ This project facilitates decentralized image upload and sharing on the blockchai
 2. Install dependencies for the hardhat:
 
    ```bash
+   # Navigate to the root directory
    cd Dgdrive3.0
    # Install hardhat dependencies
    npm install
@@ -47,7 +48,8 @@ This project facilitates decentralized image upload and sharing on the blockchai
    ```
 5. Install dependencies for the React front end:
    ```bash
-   cd client # Navigate to the React front-end directory
+   # Navigate to the React client directory
+   cd client 
    # Install React dependencies
    npm install
    ```
